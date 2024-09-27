@@ -20,11 +20,14 @@ const voterSchema = new mongoose.Schema({
     phoneNumber: {
         type: String,
         required: false, 
+        minlenght:10,
+        maxlength:10
     },
     AddharCard: { 
         type: String,
         required: true,
         unique: true, // Ensure that Aadhar card is unique
+        maxlength:12
     },
     password: {
         type: String,
